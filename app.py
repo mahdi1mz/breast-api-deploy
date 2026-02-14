@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from predictor import BreastCancerPredictor
 
 app = Flask(__name__)
+CORS(app)
 
 predictor = BreastCancerPredictor()
-
 
 @app.route("/")
 def home():
@@ -14,7 +15,6 @@ def home():
             "POST /predict": "Send JSON with 30 features"
         }
     })
-
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -32,7 +32,6 @@ def predict():
 
     except Exception:
         return jsonify({"error": "Internal server error"}), 500
-
 
 if __name__ == "__main__":
     print("Starting Flask server...")
