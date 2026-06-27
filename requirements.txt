@@ -1,6 +1,11 @@
-flask
+Flask
 scikit-learn==1.7.2
 pandas
 numpy
 gunicorn
 flask-cors
+joblib
+pytesseract
+opencv-python
+PyMuPDF
+Pillow

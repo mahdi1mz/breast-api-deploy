@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.idea/
+
+demo_feature_report.png
+benign_test_case.png
+malignant_test_case.png
